@@ -53,7 +53,7 @@ export default function ImportExport({ onDone, showToast }: Props) {
         const category = cols[2].trim()
         const subcategory = (cols[3] || '').trim()
         const amount = parseFloat(cols[4].trim())
-        const note = (cols[8] || '').trim()
+        const note = (cols[5] || '').trim()
 
         if (!date || isNaN(amount)) { errors++; continue }
         records.push({ date, type, category, subcategory, amount, note, record_by: '导入' })
